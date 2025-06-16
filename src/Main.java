@@ -3,7 +3,7 @@ import model.CreditCardAccount;
 import model.SavingAccount;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException {
         SavingAccount savingAccount = new SavingAccount();
         savingAccount.setAccountName("My Saving Account Name");
         savingAccount.deposit(200D);

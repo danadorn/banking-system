@@ -15,7 +15,7 @@ public class Account implements BankingService {
     }
 
     @Override
-    public void deposit(Double cash) {
+    public void deposit(Double cash) throws IllegalAccessException {
 
     }
 
@@ -32,8 +32,9 @@ public class Account implements BankingService {
         System.out.println("Your balance is " + balance);
         System.out.println("=".repeat(30));
     }
-    public void getAccountName(){
+    public String getAccountName(){
         System.out.println("Account Name: " + this.accountName);
+        return null;
     }
     public void setAccountName(String accountName){
         this.accountName = accountName;

@@ -16,7 +16,12 @@ public class Account implements BankingService {
 
     @Override
     public void deposit(Double cash) throws IllegalAccessException {
-
+        if (cash < 0) {
+            System.out.println("Invalid number");
+        }else {
+            balance += cash;
+            System.out.println("ដាក់លុយបានសម្រេច");
+        }
     }
 
     public void withdraw(double cash){
@@ -24,7 +29,7 @@ public class Account implements BankingService {
             throw new WithDrawException("លុយមិនគ្រប់គ្រាន់ក្នុងគនណី ឫបញ្ចូលលេខខុស");
         }
         balance -= cash;
-        System.out.println("លុយដកបានសម្រេច");
+        System.out.println("ដកលុយបានសម្រេច");
     }
 
     public void showBalance(){
